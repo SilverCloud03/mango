@@ -23,7 +23,7 @@ export default function Scene2_Scroll() {
         alt="Рука с манго"
         className="absolute inset-y-0 right-0 w-full h-full object-cover z-10 transition-transform duration-300 ease-out hidden sm:block"
         style={{
-          objectPosition: '75% center',
+          objectPosition: '90% center',
           transform: `translate(${offset.x * -2}px, ${offset.y * -2}px)`,
         }}
       />
@@ -32,7 +32,7 @@ export default function Scene2_Scroll() {
         alt="Рука с манго"
         className="absolute inset-y-0 right-0 w-full h-full object-cover z-10 transition-transform duration-300 ease-out block sm:hidden"
         style={{
-          objectPosition: '70% center',
+          objectPosition: '85% center',
           transform: `translate(${offset.x * -2}px, ${offset.y * -2}px)`,
         }}
       />
