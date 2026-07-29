@@ -38,7 +38,7 @@ export default function Scene2_Scroll() {
         }}
       />
       <div
-        className="absolute bottom-8 left-4 right-4 md:bottom-12 md:left-12 md:right-auto z-20"
+        className="absolute bottom-8 right-4 md:bottom-12 md:right-12 z-20"
         style={{ maxWidth: 340 }}
       >
         <LiquidGlass
