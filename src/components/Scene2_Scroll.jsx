@@ -2,7 +2,7 @@ import { LiquidGlass } from 'simple-liquid-glass';
 
 export default function Scene2_Scroll() {
   return (
-    <section className="scene bg-black">
+    <section className="scene bg-black overflow-hidden">
       <img
         src="b2-bg.jpeg"
         alt=""
@@ -12,8 +12,8 @@ export default function Scene2_Scroll() {
       <img
         src="b2-hand.png"
         alt="Рука с манго"
-        className="absolute inset-y-0 right-0 w-full h-full object-cover z-10"
-        style={{ objectPosition: 'right center' }}
+        className="absolute right-0 h-full w-auto z-10"
+        style={{ maxWidth: 'none' }}
       />
       <div
         className="absolute bottom-8 left-4 right-4 md:bottom-12 md:left-12 md:right-auto z-20"
