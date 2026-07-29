@@ -12,8 +12,8 @@ export default function Scene2_Scroll() {
       <img
         src="b2-hand.png"
         alt="Рука с манго"
-        className="absolute right-0 h-full w-auto z-10"
-        style={{ maxWidth: 'none' }}
+        className="absolute inset-0 w-full h-full object-cover z-10"
+        style={{ objectPosition: 'left center' }}
       />
       <div
         className="absolute bottom-8 left-4 right-4 md:bottom-12 md:left-12 md:right-auto z-20"
