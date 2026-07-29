@@ -21,24 +21,23 @@ export default function Scene2_Scroll() {
       <img
         src="b2-hand.png"
         alt="Рука с манго"
-        className="absolute inset-y-0 w-[calc(100%+38px)] h-full object-cover z-10 transition-transform duration-300 ease-out hidden sm:block"
+        className="absolute inset-y-0 right-0 w-full h-full object-cover z-10 transition-transform duration-300 ease-out hidden sm:block"
         style={{
-          left: '-38px',
-          objectPosition: '65% center',
+          objectPosition: '75% center',
           transform: `translate(${offset.x * -2}px, ${offset.y * -2}px)`,
         }}
       />
       <img
         src="b2-hand.png"
         alt="Рука с манго"
-        className="absolute inset-y-0 left-0 w-full h-full object-cover z-10 transition-transform duration-300 ease-out block sm:hidden"
+        className="absolute inset-y-0 right-0 w-full h-full object-cover z-10 transition-transform duration-300 ease-out block sm:hidden"
         style={{
-          objectPosition: '60% center',
+          objectPosition: '70% center',
           transform: `translate(${offset.x * -2}px, ${offset.y * -2}px)`,
         }}
       />
       <div
-        className="absolute bottom-8 right-4 md:bottom-12 md:right-12 z-20"
+        className="absolute bottom-8 left-4 right-4 md:bottom-12 md:left-12 md:right-auto z-20"
         style={{ maxWidth: 340 }}
       >
         <LiquidGlass
