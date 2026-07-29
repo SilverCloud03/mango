@@ -78,8 +78,4 @@ html, body {
   scroll-snap-align: start;
 }
 
-@media (max-width: 768px) {
-  .hand-img {
-    transform: scale(0.85);
-  }
-}
+
