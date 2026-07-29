@@ -24,7 +24,7 @@ export default function Scene4_Final() {
       <img
         src="b4-guy.png"
         alt="Владелец"
-        className="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-300 ease-out"
+        className="absolute inset-0 w-full h-full object-contain sm:object-cover z-10 transition-transform duration-300 ease-out"
         style={{
           transform: `translate(${offset.x * -2}px, ${offset.y * -2}px)`,
         }}
