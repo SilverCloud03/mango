@@ -1,31 +1,43 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 const videos = ['1.mp4', '2.mp4'];
 
 export default function Scene3_Transport() {
   const [idx, setIdx] = useState(0);
-  const ref = useRef(null);
+  const refs = [useRef(null), useRef(null)];
 
   function handleEnded() {
-    const next = idx + 1;
-    if (next < videos.length) {
-      setIdx(next);
-      ref.current?.load();
-      ref.current?.play();
+    const next = (idx + 1) % videos.length;
+    const nextRef = refs[next].current;
+    if (nextRef) {
+      nextRef.currentTime = 0;
+      nextRef.play().catch(() => {});
     }
+    setIdx(next);
   }
+
+  useEffect(() => {
+    const current = refs[idx].current;
+    if (current && current.paused) {
+      current.play().catch(() => {});
+    }
+  }, [idx]);
 
   return (
     <section className="scene bg-black">
-      <video
-        ref={ref}
-        src={videos[idx]}
-        autoPlay
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-        onEnded={handleEnded}
-      />
+      {videos.map((src, i) => (
+        <video
+          key={i}
+          ref={refs[i]}
+          src={src}
+          muted
+          playsInline
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${idx === i ? 'opacity-100' : 'opacity-0'}`}
+          style={{ pointerEvents: 'none' }}
+          onEnded={i === idx ? handleEnded : undefined}
+          preload="auto"
+        />
+      ))}
       <div className="absolute inset-0 bg-black/30" />
 
       <div
