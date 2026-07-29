@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Pointer, ChevronDown } from 'lucide-react';
 import { LiquidGlass } from 'simple-liquid-glass';
+import useScrollParallax from '../hooks/useScrollParallax';
 
 export default function Scene1_Start({ revealed, onReveal }) {
   const [shake, setShake] = useState(false);
@@ -8,6 +9,7 @@ export default function Scene1_Start({ revealed, onReveal }) {
   const [removeMango, setRemoveMango] = useState(false);
   const [hideButton, setHideButton] = useState(false);
   const [clicked, setClicked] = useState(false);
+  const scrollY = useScrollParallax();
 
   function handleClick() {
     if (!clicked) {
@@ -35,7 +37,8 @@ export default function Scene1_Start({ revealed, onReveal }) {
       <img
         src="b1-bg.jpeg"
         alt=""
-        className="absolute inset-0 w-full h-full object-cover blur-sm scale-110"
+        className="absolute inset-0 w-full h-full object-cover blur-sm"
+        style={{ transform: `translateY(${scrollY * 0.08}px) scale(1.1)` }}
       />
       <div className="absolute inset-0 bg-black/20" />
 
