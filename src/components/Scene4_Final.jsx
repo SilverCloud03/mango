@@ -1,18 +1,9 @@
-import { useState } from 'react';
 import { Send } from 'lucide-react';
 import { LiquidGlass } from 'simple-liquid-glass';
 
 export default function Scene4_Final() {
-  const [offset, setOffset] = useState({ x: 0, y: 0 });
-
-  function handleMouseMove(e) {
-    const x = (e.clientX / window.innerWidth - 0.5) * 20;
-    const y = (e.clientY / window.innerHeight - 0.5) * 20;
-    setOffset({ x, y });
-  }
-
   return (
-    <section className="scene bg-black overflow-hidden" onMouseMove={handleMouseMove}>
+    <section className="scene bg-black overflow-hidden">
       <img
         src="b4-bg.jpeg"
         alt=""
@@ -24,10 +15,7 @@ export default function Scene4_Final() {
       <img
         src="b4-guy.png"
         alt="Владелец"
-        className="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-300 ease-out"
-        style={{
-          transform: `translate(${offset.x * -2}px, ${offset.y * -2}px)`,
-        }}
+        className="absolute inset-0 w-full h-full object-cover z-10"
       />
 
       <div
