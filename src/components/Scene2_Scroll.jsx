@@ -12,7 +12,7 @@ export default function Scene2_Scroll() {
       <img
         src="b2-hand.png"
         alt="Рука с манго"
-        className="hand-img absolute bottom-0 right-0 z-10 object-contain w-full md:w-full max-md:w-[75%]"
+        className="hand-img absolute bottom-10 right-0 z-10 object-contain w-full md:w-full max-md:w-[75%]"
       />
       <div
         className="absolute bottom-8 left-4 right-4 md:bottom-12 md:left-12 md:right-auto z-20"
