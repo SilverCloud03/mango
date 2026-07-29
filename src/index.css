@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.scene {
+  height: 100dvh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10% { transform: translateX(-8px) rotate(-1deg); }
+  20% { transform: translateX(8px) rotate(1deg); }
+  30% { transform: translateX(-6px) rotate(-0.5deg); }
+  40% { transform: translateX(6px) rotate(0.5deg); }
+  50% { transform: translateX(-4px); }
+  60% { transform: translateX(4px); }
+  70% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+}
+
+.shake {
+  animation: shake 0.6s ease-in-out;
+}
+
+.mango-offset {
+  transform: translateY(-38px);
+}
+
+@keyframes fall {
+  0% { transform: translateY(-38px); opacity: 1; }
+  100% { transform: translateY(200dvh) scale(1.15); opacity: 0.4; }
+}
+
+.fall {
+  animation: fall 0.7s ease-in forwards;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+#scroll-root {
+  height: 100dvh;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+#scroll-root.scroll-off {
+  overflow: hidden;
+}
+
+#scroll-root.scroll-on {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#scroll-root::-webkit-scrollbar {
+  display: none;
+}
+
+.scene-wrap {
+  scroll-snap-align: start;
+}
