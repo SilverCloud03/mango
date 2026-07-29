@@ -21,18 +21,9 @@ export default function Scene2_Scroll() {
       <img
         src="b2-hand.png"
         alt="Рука с манго"
-        className="absolute inset-y-0 left-0 w-full h-full object-cover z-10 transition-transform duration-300 ease-out hidden sm:block"
+        className="absolute inset-y-0 left-0 w-full h-full object-cover z-10 transition-transform duration-300 ease-out"
         style={{
-          objectPosition: 'left center',
-          transform: `translate(calc(38px + ${offset.x * -2}px), ${offset.y * -2}px)`,
-        }}
-      />
-      <img
-        src="b2-hand.png"
-        alt="Рука с манго"
-        className="absolute inset-y-0 left-0 w-full h-full object-cover z-10 transition-transform duration-300 ease-out block sm:hidden"
-        style={{
-          objectPosition: 'left center',
+          objectPosition: '65% center',
           transform: `translate(${offset.x * -2}px, ${offset.y * -2}px)`,
         }}
       />
