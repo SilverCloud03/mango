@@ -1,5 +1,4 @@
 import { Send } from 'lucide-react';
-import { LiquidGlass } from 'simple-liquid-glass';
 
 export default function Scene4_Final() {
   return (
@@ -17,39 +16,6 @@ export default function Scene4_Final() {
         alt="Владелец"
         className="absolute inset-0 w-full h-full object-cover z-10"
       />
-
-      <div
-        className="absolute top-4 left-4 right-4 md:top-12 md:right-12 md:left-auto z-20"
-        style={{ maxWidth: 300 }}
-      >
-        <LiquidGlass
-          radius={16}
-          border={0.12}
-          frost={0.18}
-          alpha={0.75}
-          lightness={58}
-          blur={12}
-          saturation={130}
-          background="rgba(255, 255, 255, 0.1)"
-          borderColor="rgba(255, 255, 255, 0.15)"
-          style={{ boxShadow: '0 12px 40px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.08) inset' }}
-        >
-          <div style={{ padding: '20px 24px' }}>
-            <p
-              className="text-white"
-              style={{
-                fontFamily: "'Playfair Display', 'Times New Roman', serif",
-                fontSize: 'clamp(18px, 4vw, 22px)',
-                lineHeight: 1.4,
-              }}
-            >
-              С любовью
-              <br />
-              от семьи МАНГО
-            </p>
-          </div>
-        </LiquidGlass>
-      </div>
 
       <footer
         className="absolute bottom-0 left-0 w-full z-20 flex items-center px-4"
