@@ -1,17 +1,8 @@
-import { useState } from 'react';
 import { LiquidGlass } from 'simple-liquid-glass';
 
 export default function Scene2_Scroll() {
-  const [offset, setOffset] = useState({ x: 0, y: 0 });
-
-  function handleMouseMove(e) {
-    const x = (e.clientX / window.innerWidth - 0.5) * 20;
-    const y = (e.clientY / window.innerHeight - 0.5) * 20;
-    setOffset({ x, y });
-  }
-
   return (
-    <section className="scene bg-black" onMouseMove={handleMouseMove}>
+    <section className="scene bg-black">
       <img
         src="b2-bg.jpeg"
         alt=""
@@ -22,19 +13,13 @@ export default function Scene2_Scroll() {
         src="b2-hand.png"
         alt="Рука с манго"
         className="absolute inset-y-0 right-0 w-full h-full object-cover z-10 transition-transform duration-300 ease-out hidden sm:block"
-        style={{
-          objectPosition: '90% center',
-          transform: `translate(${offset.x * -2}px, ${offset.y * -2}px)`,
-        }}
+        style={{ objectPosition: '90% center' }}
       />
       <img
         src="b2-hand.png"
         alt="Рука с манго"
         className="absolute inset-y-0 right-0 w-full h-full object-cover z-10 transition-transform duration-300 ease-out block sm:hidden"
-        style={{
-          objectPosition: '85% center',
-          transform: `translate(${offset.x * -2}px, ${offset.y * -2}px)`,
-        }}
+        style={{ objectPosition: '85% center' }}
       />
       <div
         className="absolute bottom-8 left-4 right-4 md:bottom-12 md:left-12 md:right-auto z-20"
