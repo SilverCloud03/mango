@@ -17,7 +17,7 @@ export default function Scene2_Scroll() {
         alt=""
         className="absolute inset-0 w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0 bg-black/10" />
       <img
         src="b2-hand.png"
         alt="Рука с манго"
@@ -44,14 +44,14 @@ export default function Scene2_Scroll() {
         <LiquidGlass
           radius={16}
           border={0.12}
-          frost={0.18}
-          alpha={0.75}
-          lightness={58}
-          blur={12}
-          saturation={130}
-          background="rgba(255, 255, 255, 0.1)"
-          borderColor="rgba(255, 255, 255, 0.15)"
-          style={{ boxShadow: '0 12px 40px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.08) inset' }}
+          frost={0.05}
+          alpha={0.6}
+          lightness={55}
+          blur={4}
+          saturation={120}
+          background="rgba(255, 255, 255, 0.08)"
+          borderColor="rgba(255, 255, 255, 0.12)"
+          style={{ boxShadow: '0 8px 24px rgba(0,0,0,0.25), 0 0 0 1px rgba(255,255,255,0.06) inset' }}
         >
           <div style={{ padding: '24px 28px' }}>
             <p
