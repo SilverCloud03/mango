@@ -12,13 +12,7 @@ export default function Scene2_Scroll() {
       <img
         src="b2-hand.png"
         alt="Рука с манго"
-        className="absolute inset-y-0 right-0 w-full h-full object-cover z-10 transition-transform duration-300 ease-out hidden sm:block"
-        style={{ objectPosition: '90% center' }}
-      />
-      <img
-        src="b2-hand.png"
-        alt="Рука с манго"
-        className="absolute inset-y-0 right-0 w-3/5 h-full object-contain z-10 block sm:hidden"
+        className="absolute inset-y-0 right-0 w-full h-full object-cover z-10"
         style={{ objectPosition: 'right center' }}
       />
       <div
