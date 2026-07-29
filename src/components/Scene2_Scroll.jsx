@@ -1,10 +1,8 @@
 import { useState } from 'react';
 import { LiquidGlass } from 'simple-liquid-glass';
-import useScrollParallax from '../hooks/useScrollParallax';
 
 export default function Scene2_Scroll() {
   const [offset, setOffset] = useState({ x: 0, y: 0 });
-  const scrollY = useScrollParallax();
 
   function handleMouseMove(e) {
     const x = (e.clientX / window.innerWidth - 0.5) * 20;
@@ -18,7 +16,6 @@ export default function Scene2_Scroll() {
         src="b2-bg.jpeg"
         alt=""
         className="absolute inset-0 w-full h-full object-cover"
-        style={{ transform: `translateY(${(scrollY - window.innerHeight) * 0.1}px)` }}
       />
       <div className="absolute inset-0 bg-black/10" />
       <img

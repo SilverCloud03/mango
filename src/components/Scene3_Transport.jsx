@@ -1,12 +1,10 @@
 import { useState, useRef, useEffect } from 'react';
-import useScrollParallax from '../hooks/useScrollParallax';
 
 const videos = ['1.mp4', '2.mp4'];
 
 export default function Scene3_Transport() {
   const [idx, setIdx] = useState(0);
   const refs = [useRef(null), useRef(null)];
-  const scrollY = useScrollParallax();
 
   function handleEnded() {
     const next = (idx + 1) % videos.length;
@@ -27,24 +25,19 @@ export default function Scene3_Transport() {
 
   return (
     <section className="scene bg-black">
-      <div
-        className="absolute inset-0 w-full h-full"
-        style={{ transform: `translateY(${(scrollY - window.innerHeight * 2) * 0.15}px)` }}
-      >
-        {videos.map((src, i) => (
-          <video
-            key={i}
-            ref={refs[i]}
-            src={src}
-            muted
-            playsInline
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${idx === i ? 'opacity-100' : 'opacity-0'}`}
-            style={{ pointerEvents: 'none' }}
-            onEnded={i === idx ? handleEnded : undefined}
-            preload="auto"
-          />
-        ))}
-      </div>
+      {videos.map((src, i) => (
+        <video
+          key={i}
+          ref={refs[i]}
+          src={src}
+          muted
+          playsInline
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${idx === i ? 'opacity-100' : 'opacity-0'}`}
+          style={{ pointerEvents: 'none' }}
+          onEnded={i === idx ? handleEnded : undefined}
+          preload="auto"
+        />
+      ))}
       <div className="absolute inset-0 bg-black/30" />
 
       <div
