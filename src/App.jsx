@@ -16,18 +16,18 @@ function App() {
     >
       <Navbar revealed={revealed} />
       <NavDots revealed={revealed} />
-      <div id="start" className="scene-wrap" data-animate="blur-up" data-animate-out="blur-down">
+      <div id="start" className="scene-wrap">
         <Scene1_Start revealed={revealed} onReveal={() => setRevealed(true)} />
       </div>
       {revealed && (
         <>
-          <div id="about" className="scene-wrap" data-animate="blur-up" data-animate-out="blur-down">
+          <div id="about" className="scene-wrap">
             <Scene2_Scroll />
           </div>
-          <div id="transport" className="scene-wrap" data-animate="blur-up" data-animate-out="blur-down">
+          <div id="transport" className="scene-wrap">
             <Scene3_Transport />
           </div>
-          <div id="contacts" className="scene-wrap" data-animate="blur-up" data-animate-out="blur-down">
+          <div id="contacts" className="scene-wrap">
             <Scene4_Final />
           </div>
         </>
