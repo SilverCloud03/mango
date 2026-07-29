@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 
-const videos = ['/1.mp4', '/2.mp4'];
+const videos = ['1.mp4', '2.mp4'];
 
 export default function Scene3_Transport() {
   const [idx, setIdx] = useState(0);

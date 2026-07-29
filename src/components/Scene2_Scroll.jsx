@@ -13,13 +13,13 @@ export default function Scene2_Scroll() {
   return (
     <section className="scene bg-black" onMouseMove={handleMouseMove}>
       <img
-        src="/b2-bg.jpeg"
+        src="b2-bg.jpeg"
         alt=""
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-black/30" />
       <img
-        src="/b2-hand.png"
+        src="b2-hand.png"
         alt="Рука с манго"
         className="absolute inset-y-0 left-0 w-full h-full object-cover z-10 transition-transform duration-300 ease-out"
         style={{

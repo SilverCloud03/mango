@@ -33,7 +33,7 @@ export default function Scene1_Start({ revealed, onReveal }) {
   return (
     <section className="scene bg-black">
       <img
-        src="/b1-bg.jpeg"
+        src="b1-bg.jpeg"
         alt=""
         className="absolute inset-0 w-full h-full object-cover blur-sm scale-110"
       />
@@ -43,7 +43,7 @@ export default function Scene1_Start({ revealed, onReveal }) {
         <div className={`absolute inset-0 z-10 ${fall ? 'fall' : 'mango-offset'}`}>
           <div className={`w-full h-full ${shake ? 'shake' : ''}`}>
             <img
-              src="/b1-mango.png"
+              src="b1-mango.png"
               alt="Манго"
               className="w-full h-full object-cover"
             />

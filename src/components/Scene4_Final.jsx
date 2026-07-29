@@ -14,7 +14,7 @@ export default function Scene4_Final() {
   return (
     <section className="scene bg-black overflow-hidden" onMouseMove={handleMouseMove}>
       <img
-        src="/b4-bg.jpeg"
+        src="b4-bg.jpeg"
         alt=""
         className="absolute inset-0 w-full h-full object-cover"
         style={{ filter: 'blur(6px)', transform: 'scale(1.15)' }}
@@ -22,7 +22,7 @@ export default function Scene4_Final() {
       <div className="absolute inset-0 bg-black/30" />
 
       <img
-        src="/b4-guy.png"
+        src="b4-guy.png"
         alt="Владелец"
         className="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-300 ease-out"
         style={{
