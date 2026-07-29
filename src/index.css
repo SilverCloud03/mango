@@ -79,6 +79,9 @@ html, body {
 }
 
 @media (max-width: 768px) {
+  .scene {
+    height: 80vh;
+  }
   .hand-img {
     transform: scale(0.85);
   }
