@@ -76,19 +76,6 @@ export default function Scene1_Start({ revealed, onReveal }) {
         className={`absolute left-1/2 -translate-x-1/2 text-center z-30 pointer-events-none select-none transition-opacity duration-700 ${revealed ? 'opacity-100' : 'opacity-0'}`}
         style={{ bottom: 0 }}
       >
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#808000"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          style={{ width: 'clamp(48px, 10vw, 96px)', height: 'clamp(48px, 10vw, 96px)' }}
-          className="mb-2"
-        >
-          <path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 2 8 0 5.5-4.78 10-10 10Z" />
-          <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
-        </svg>
         <p
           style={{
             fontSize: 'clamp(1rem, 5vw, 3rem)',
