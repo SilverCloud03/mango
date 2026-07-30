@@ -76,6 +76,18 @@ export default function Scene1_Start({ revealed, onReveal }) {
         className={`absolute left-1/2 -translate-x-1/2 text-center z-30 pointer-events-none select-none transition-opacity duration-700 ${revealed ? 'opacity-100' : 'opacity-0'}`}
         style={{ bottom: 0 }}
       >
+        <p
+          style={{
+            fontSize: 'clamp(1rem, 5vw, 3rem)',
+            fontWeight: 300,
+            color: '#fff',
+            letterSpacing: '0.15em',
+            lineHeight: 1.2,
+          }}
+          className="font-sans"
+        >
+          ОВОЩИ-ФРУКТЫ
+        </p>
         <h1
           style={{
             fontSize: 'clamp(3rem, 15vw, 10rem)',
@@ -85,22 +97,10 @@ export default function Scene1_Start({ revealed, onReveal }) {
             lineHeight: 0.7,
             whiteSpace: 'nowrap',
           }}
-          className="font-serif"
+          className="font-serif mt-2"
         >
           МАНГО
         </h1>
-        <p
-          style={{
-            fontSize: 'clamp(1rem, 5vw, 3rem)',
-            fontWeight: 300,
-            color: '#fff',
-            letterSpacing: '0.15em',
-            lineHeight: 1.2,
-          }}
-          className="font-sans mt-2"
-        >
-          ОВОЩИ-ФРУКТЫ
-        </p>
       </div>
     </section>
   );
