@@ -72,20 +72,36 @@ export default function Scene1_Start({ revealed, onReveal }) {
         </LiquidGlass>
       </div>
 
-      <h1
-        className={`absolute left-1/2 -translate-x-1/2 text-center font-serif z-30 pointer-events-none select-none transition-opacity duration-700 ${revealed ? 'opacity-100' : 'opacity-0'}`}
-        style={{
-          bottom: 0,
-          fontSize: 'clamp(3rem, 15vw, 10rem)',
-          fontWeight: 200,
-          color: '#f1a842',
-          letterSpacing: '0.05em',
-          lineHeight: 0.7,
-          whiteSpace: 'nowrap',
-        }}
+      <div
+        className={`absolute left-1/2 -translate-x-1/2 text-center z-30 pointer-events-none select-none transition-opacity duration-700 ${revealed ? 'opacity-100' : 'opacity-0'}`}
+        style={{ bottom: 0 }}
       >
-        МАНГО
-      </h1>
+        <h1
+          style={{
+            fontSize: 'clamp(3rem, 15vw, 10rem)',
+            fontWeight: 200,
+            color: '#f1a842',
+            letterSpacing: '0.05em',
+            lineHeight: 0.7,
+            whiteSpace: 'nowrap',
+          }}
+          className="font-serif"
+        >
+          МАНГО
+        </h1>
+        <p
+          style={{
+            fontSize: 'clamp(1rem, 5vw, 3rem)',
+            fontWeight: 300,
+            color: '#fff',
+            letterSpacing: '0.15em',
+            lineHeight: 1.2,
+          }}
+          className="font-sans mt-2"
+        >
+          ОВОЩИ-ФРУКТЫ
+        </p>
+      </div>
     </section>
   );
 }
